@@ -10,10 +10,13 @@
         }
         static translate(text, fromLanguageCode, toLanguageCode) {
             return new Promise((resolve, reject) => {
-                return translateApi(text, { from: fromLanguageCode, to: toLanguageCode })
+                let option = { to: toLanguageCode };
+                if (fromLanguageCode) option.from = fromLanguageCode;
+
+                return translateApi(text, option)
                     .then((translation) => {
                         resolve({
-                            text: translation.text + 'xxx'
+                            text: translation.text
                         });
                     })
                     .catch((err) => {
