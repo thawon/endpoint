@@ -13,7 +13,7 @@
                 return translateApi(text, { from: fromLanguageCode, to: toLanguageCode })
                     .then((translation) => {
                         resolve({
-                            text: translation.text
+                            text: translation.text + 'xxx'
                         });
                     })
                     .catch((err) => {
