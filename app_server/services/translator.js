@@ -16,7 +16,10 @@
                 return translateApi(text, option)
                     .then((translation) => {
                         resolve({
-                            text: translation.text
+                            text: translation.text,
+                            from: {
+                                languageCode: translation.from.language.iso 
+                            }
                         });
                     })
                     .catch((err) => {

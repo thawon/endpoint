@@ -15,9 +15,7 @@
         Translator.translate(text, fromLanguageCode, toLanguageCode)
             .then((translation) => {
                 res.status(201);
-                res.json({
-                    text: translation.text
-                });
+                res.json(translation);
             })
             .catch((err) => {
                 res.status(404);
