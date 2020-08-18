@@ -7,6 +7,6 @@
     "\\app_server",
     "\\app_server\\services"
   ],
-  "SelectedNode": "\\app.js",
+  "SelectedNode": "\\app_api\\controllers\\system.js",
   "PreviewInSolutionExplorer": false
 }

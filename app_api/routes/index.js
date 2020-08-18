@@ -4,7 +4,7 @@ const ctrTranslation = require('../controllers/translation');
 const ctrSystem = require('../controllers/system');
 
 // translate
-router.get('/translate/:text/:toLanguageCode/:fromLanguageCode?', ctrTranslation.translate);
+router.post('/translate/:toLanguageCode/:fromLanguageCode?', ctrTranslation.translate);
 
 // keep endpoint alive
 router.get('/shake', ctrSystem.shake);

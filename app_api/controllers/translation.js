@@ -8,7 +8,7 @@
     };
 
     function translate(req, res) {
-        let text = req.params.text,
+        let text = req.body.text,
             fromLanguageCode = req.params.fromLanguageCode,
             toLanguageCode = req.params.toLanguageCode;
 
